@@ -1,0 +1,236 @@
+Using device: cuda
+GPU: NVIDIA GeForce RTX 5090
+/venv/main/lib/python3.12/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+Train examples: 50000, test examples: 10000
+Batches per epoch (train): 390
+[2.1] device=cuda, gpu=NVIDIA GeForce RTX 5090
+[2.1] config: SKNetConfig(name='2.1_intra_L2', blocks_per_stage=[5, 5, 4], channels=[160, 320, 640], branches=['3x3', '1x1'], stem_channels=None, use_intra_trans=True, use_skip=True, stoch_depth_mode='none', stoch_depth_max_rate=0.0, shake_shake=False, basic_mode=False, num_classes=10)
+--- 2.1_intra_L2 [warmup=5] --- 41.06M params, 500 epochs ---
+/workspace/project/sknet_lib.py:1086: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler    = torch.cuda.amp.GradScaler(enabled=use_amp and torch.cuda.is_available())
+/workspace/project/sknet_lib.py:1199: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp and torch.cuda.is_available(),
+/workspace/project/sknet_lib.py:736: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp and torch.cuda.is_available(),
+
+=== [2.1] checkpoint at epoch 1 ===
+    train/test_raw/test_ema: 16.47% / 26.51% / 15.03%
+    best so far : 26.51% (raw)
+    lr / elapsed: 0.0208 / 0.50 min
+    |grad| mean/max : 2.911 / 6.224
+    loss mean/max   : 2.228 / 2.431
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 3 ===
+    train/test_raw/test_ema: 10.25% / 11.32% / 10.00%
+    best so far : 26.51% (raw)
+    lr / elapsed: 0.0604 / 1.39 min
+    |grad| mean/max : 0.211 / 3.221
+    loss mean/max   : 2.302 / 2.328
+    ⚠️  test accuracy near chance — possible bug
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 5 ===
+    train/test_raw/test_ema: 18.30% / 21.83% / 10.00%
+    best so far : 26.51% (raw)
+    lr / elapsed: 0.1000 / 2.28 min
+    |grad| mean/max : 0.766 / 6.516
+    loss mean/max   : 2.189 / 2.330
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 10 ===
+    train/test_raw/test_ema: 43.73% / 58.59% / 10.00%
+    best so far : 58.59% (raw)
+    lr / elapsed: 0.1000 / 4.51 min
+    |grad| mean/max : 0.872 / 1.325
+    loss mean/max   : 1.764 / 2.192
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 25 ===
+    train/test_raw/test_ema: 56.18% / 81.12% / 75.04%
+    best so far : 81.12% (raw)
+    lr / elapsed: 0.0996 / 11.31 min
+    |grad| mean/max : 1.090 / 1.423
+    loss mean/max   : 1.521 / 2.122
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 50 ===
+    train/test_raw/test_ema: 59.24% / 78.50% / 85.34%
+    best so far : 88.12% (EMA)
+    lr / elapsed: 0.0980 / 22.53 min
+    |grad| mean/max : 1.178 / 1.834
+    loss mean/max   : 1.452 / 2.053
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 75 ===
+    train/test_raw/test_ema: 61.06% / 73.32% / 88.78%
+    best so far : 89.77% (EMA)
+    lr / elapsed: 0.0951 / 33.74 min
+    |grad| mean/max : 1.214 / 1.839
+    loss mean/max   : 1.426 / 2.013
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 100 ===
+    train/test_raw/test_ema: 61.67% / 83.99% / 82.83%
+    best so far : 90.40% (EMA)
+    lr / elapsed: 0.0912 / 44.92 min
+    |grad| mean/max : 1.237 / 1.833
+    loss mean/max   : 1.418 / 2.014
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 125 ===
+    train/test_raw/test_ema: 61.43% / 84.41% / 88.65%
+    best so far : 91.12% (EMA)
+    lr / elapsed: 0.0862 / 56.09 min
+    |grad| mean/max : 1.283 / 1.784
+    loss mean/max   : 1.401 / 2.040
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 150 ===
+    train/test_raw/test_ema: 63.15% / 86.64% / 89.28%
+    best so far : 91.50% (EMA)
+    lr / elapsed: 0.0803 / 67.26 min
+    |grad| mean/max : 1.332 / 1.888
+    loss mean/max   : 1.372 / 2.025
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 175 ===
+    train/test_raw/test_ema: 62.19% / 86.23% / 89.64%
+    best so far : 91.55% (EMA)
+    lr / elapsed: 0.0736 / 78.42 min
+    |grad| mean/max : 1.345 / 1.991
+    loss mean/max   : 1.399 / 2.001
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 200 ===
+    train/test_raw/test_ema: 65.94% / 86.45% / 90.41%
+    best so far : 92.40% (EMA)
+    lr / elapsed: 0.0664 / 89.57 min
+    |grad| mean/max : 1.447 / 2.074
+    loss mean/max   : 1.327 / 1.970
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 225 ===
+    train/test_raw/test_ema: 64.98% / 89.12% / 90.00%
+    best so far : 92.93% (EMA)
+    lr / elapsed: 0.0587 / 100.73 min
+    |grad| mean/max : 1.476 / 2.379
+    loss mean/max   : 1.344 / 1.947
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 250 ===
+    train/test_raw/test_ema: 67.04% / 86.60% / 93.15%
+    best so far : 93.15% (EMA)
+    lr / elapsed: 0.0508 / 111.90 min
+    |grad| mean/max : 1.590 / 2.309
+    loss mean/max   : 1.299 / 1.907
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 275 ===
+    train/test_raw/test_ema: 66.82% / 89.49% / 94.03%
+    best so far : 94.32% (EMA)
+    lr / elapsed: 0.0429 / 123.07 min
+    |grad| mean/max : 1.640 / 2.459
+    loss mean/max   : 1.309 / 1.936
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 300 ===
+    train/test_raw/test_ema: 68.57% / 90.26% / 94.30%
+    best so far : 94.48% (EMA)
+    lr / elapsed: 0.0352 / 134.24 min
+    |grad| mean/max : 1.806 / 2.734
+    loss mean/max   : 1.251 / 1.935
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 325 ===
+    train/test_raw/test_ema: 71.71% / 89.76% / 93.81%
+    best so far : 95.18% (EMA)
+    lr / elapsed: 0.0278 / 145.41 min
+    |grad| mean/max : 1.958 / 2.722
+    loss mean/max   : 1.191 / 1.856
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 350 ===
+    train/test_raw/test_ema: 74.26% / 93.26% / 95.15%
+    best so far : 95.19% (EMA)
+    lr / elapsed: 0.0210 / 156.58 min
+    |grad| mean/max : 2.136 / 3.097
+    loss mean/max   : 1.160 / 1.839
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 375 ===
+    train/test_raw/test_ema: 73.34% / 94.82% / 95.42%
+    best so far : 96.20% (EMA)
+    lr / elapsed: 0.0149 / 167.75 min
+    |grad| mean/max : 2.358 / 3.542
+    loss mean/max   : 1.169 / 1.767
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 400 ===
+    train/test_raw/test_ema: 76.25% / 95.47% / 96.61%
+    best so far : 96.78% (EMA)
+    lr / elapsed: 0.0097 / 178.93 min
+    |grad| mean/max : 2.693 / 3.865
+    loss mean/max   : 1.093 / 1.749
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 425 ===
+    train/test_raw/test_ema: 79.54% / 96.29% / 96.93%
+    best so far : 97.25% (EMA)
+    lr / elapsed: 0.0056 / 190.09 min
+    |grad| mean/max : 3.122 / 4.635
+    loss mean/max   : 1.023 / 1.696
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 450 ===
+    train/test_raw/test_ema: 79.32% / 97.30% / 97.31%
+    best so far : 97.43% (EMA)
+    lr / elapsed: 0.0025 / 201.28 min
+    |grad| mean/max : 3.483 / 5.302
+    loss mean/max   : 1.011 / 1.627
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 475 ===
+    train/test_raw/test_ema: 83.55% / 97.59% / 97.64%
+    best so far : 97.73% (raw)
+    lr / elapsed: 0.0006 / 212.48 min
+    |grad| mean/max : 3.854 / 5.967
+    loss mean/max   : 0.938 / 1.568
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+
+=== [2.1] checkpoint at epoch 500 ===
+    train/test_raw/test_ema: 83.89% / 97.67% / 97.68%
+    best so far : 97.78% (EMA)
+    lr / elapsed: 0.0000 / 223.65 min
+    |grad| mean/max : 3.880 / 6.156
+    loss mean/max   : 0.947 / 1.530
+=== (continues; next checkpoint in ≤ 25 epochs) ===
+
+--- 2.1_intra_L2 done: best 97.78% (EMA) @ epoch 486 in 223.7 min, nan_steps=0 ---
+[2.1] wrote diagnostic plots: plot_*_2_1.png
+[2.1] saved phase_2_runs/g0_baseline_2_1/ckpt_run_2_1.pt, phase_2_runs/g0_baseline_2_1/stats_run_2_1.pt
+[2.1] best_acc = 97.78% (EMA) @ epoch 486

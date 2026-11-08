@@ -1,0 +1,12 @@
+# The saved text outputs of the notebook come from Google Colab (Tesla T4 GPU, May 2026). The three
+# training-curve plots were drawn again later from the same statistics files, only to change their titles.
+# The training runs of May 2026 used Python 3.12 on rented GPUs. Their logs show NumPy 2.4
+# or later and a PyTorch version that already marks torch.cuda.amp as deprecated.
+# Exact package versions of the training runs were not recorded. evaluate.py was checked on 8 November 2026 with
+# Python 3.11.10, torch 2.4.1 (CUDA 12.4), torchvision 0.19.1 and numpy 1.26.3.
+torch>=2.0
+torchvision>=0.15
+numpy
+matplotlib
+# Optional, for running tests/ with pytest (tests/test_smoke.py also runs without it)
+# pytest

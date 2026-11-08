@@ -1,0 +1,13 @@
+# CIFAR-10, downloaded by torchvision on first use
+data/
+# Checkpoints and statistics downloaded from Hugging Face (evaluate.py puts them in weights/) or written by train.py
+*.pt
+# Output folders of train.py (checkpoints, statistics, summaries, plots)
+runs/
+# Plots written by the notebook and by train.py
+plot_*.png
+.ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
+weights/
+*.part
